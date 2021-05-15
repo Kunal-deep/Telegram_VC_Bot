@@ -70,13 +70,9 @@ async def help(_, message):
     await message.reply_text(HELP_TEXT, quote=False)
 
 
-@app.on_message(
-    filters.command("repo")
-    & ~filters.private
-    & (filters.user(SUDOERS) | filters.chat(SUDO_CHAT_ID))
-)
-async def repo(_, message):
-    await message.reply_text(REPO_TEXT, quote=False)
+
+
+
 
 
 @app.on_message(
@@ -485,5 +481,5 @@ async def tgplay(_, message):
 
 
 app.start()
-print("\nBot Starting...\nFor Support Join https://t.me/TGVCSUPPORT\n")
+print("\nBot Starting...\n")
 idle()
